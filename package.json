@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "rimraf ./lib && rollup -c --watch --environment NODE_ENV:development",
-    "serve": "cd example && npm run dev"
+    "serve": "cd example && npm run dev",
+    "serve-cli": "cd example-cli && npm run serve"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
@@ -34,5 +35,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
 }

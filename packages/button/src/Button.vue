@@ -12,7 +12,9 @@ export default {
   setup() {
     const state = ref(0);
     function add() {
-      state.value++;
+      console.log(123);
+      state.value = 66;
+      console.log(state);
     }
     return {
       state,
