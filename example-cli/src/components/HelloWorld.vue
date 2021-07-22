@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { ref } from "vue"
+import { ref,h } from "vue"
 export default {
   name: 'HelloWorld',
   props: {

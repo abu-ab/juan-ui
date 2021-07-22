@@ -5,9 +5,9 @@
   </div>
 </template>
 
-<script>
-import { ref } from 'vue';
-export default {
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
   name: 'jButton',
   setup() {
     const state = ref(0);
@@ -21,7 +21,7 @@ export default {
       add
     };
   }
-};
+});
 </script>
 
 <style>
