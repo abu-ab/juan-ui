@@ -1,6 +1,6 @@
 import output from "./build/output"
 import plugins from "./build/plugins"
-import packagesConfig from "./packages/packages.config.ts"
+import packagesConfig from "./packages/packages.config"
 
 const config = [{
         input: './packages/index.ts', //输入

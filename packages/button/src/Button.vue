@@ -12,9 +12,8 @@ export default defineComponent({
   setup() {
     const state = ref(0);
     function add() {
-      console.log(123);
-      state.value = 66;
-      console.log(state);
+      console.log("12321")
+      state.value += 1;
     }
     return {
       state,

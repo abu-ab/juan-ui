@@ -1,4 +1,4 @@
-import Button from './button/index.ts';
+import Button from './button/index';
 
 // 存储组件列表
 const components = [Button];

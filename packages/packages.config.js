@@ -7,7 +7,8 @@ const fs = require('fs');
 // 获取当前文件夹下所有子文件夹名称
 let componentFileNames = []; // 'cd-button', 'edit-table'
 const files = fs.readdirSync(path.join(__dirname, '/packages'));
-files.forEach((file: never) => {
+console.log(files)
+files.forEach((file) => {
   const stat = fs.lstatSync(path.join(__dirname, `/packages/${file}`));
   // 判断是否是文件夹
   if (stat.isDirectory()) {
@@ -18,7 +19,7 @@ files.forEach((file: never) => {
 // 单个组件分别打包配置
 const packagesConfig = componentFileNames.map(item => {
   return {
-    input: `packages/${item}/index.js`,
+    input: `packages/${item}/index.ts`,
     output: [
       {
         file: `lib/${item}.js`,
@@ -31,5 +32,5 @@ const packagesConfig = componentFileNames.map(item => {
     external: ['vue'] // 外部依赖
   };
 });
-
+console.log(packagesConfig)
 export default packagesConfig;

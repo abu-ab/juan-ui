@@ -1,30 +1,22 @@
+import path from 'path'
 // 输出
 const output = [{
-        file: 'lib/index.js',
+        file: path.resolve('lib/index.js'),
         format: 'umd',
         name: 'juan',
-        exports: "default",
-        globals: {
-            "vue": "vue"
-        }
+        sourcemap: true
     },
     {
-        file: 'lib/index.esm.js',
+        file: path.resolve('lib/index.esm.js'),
         format: 'es',
         name: 'juan',
-        exports: "default",
-        globals: {
-            "vue": "vue"
-        }
+        sourcemap: true
     },
     {
-        file: 'lib/index.cjs.js',
+        file: path.resolve('lib/index.cjs.js'),
         format: 'cjs',
         name: 'juan',
-        exports: "default",
-        globals: {
-            "vue": "vue"
-        }
+        sourcemap: true
     },
 ]
 export default output

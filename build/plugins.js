@@ -1,4 +1,4 @@
-const typescript = require("rollup-plugin-typescript")
+const typescript = require("rollup-plugin-typescript2")
 const resolve = require('rollup-plugin-node-resolve') // 告诉Rollup 如何查找外部模块
 const json = require('rollup-plugin-json') //读取json文件
 const vue = require('rollup-plugin-vue') // 处理vue文件
@@ -11,28 +11,30 @@ const {
     terser
 } = require('rollup-plugin-terser')
 
+import path from 'path'
+
 const isProd = process.env.NODE_ENV == 'production'
 const extensions = [
-    '.js',
+    ".js",
     '.ts',
     '.tsx'
 ]
 // 通用插件
 
 const basePlugins = [
-    resolve(extensions),
+    resolve({
+        extensions
+    }),
     json(),
     vue({
         css: false
     }),
     typescript({
-        // objectHashIgnoreUnknownHack: true
+        tsconfig: path.resolve(__dirname, 'tsconfig.json')
     }),
     babel({
         exclude: 'node_modules/**', //防止打包
-        extensions: [
-            ".ts"
-        ],
+        extensions,
         runtimeHelpers: true // 使plugin-transform-runtime生效
     }),
     commonjs(),
