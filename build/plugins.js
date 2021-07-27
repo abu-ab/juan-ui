@@ -26,7 +26,6 @@ const basePlugins = [
     resolve({
         extensions
     }),
-    less(),
     json(),
     vue({
         css: false

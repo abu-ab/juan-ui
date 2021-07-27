@@ -22,9 +22,6 @@ const basePlugins = [
   resolve({
     extensions
   }),
-  less({
-
-  }),
   json(),
   vue(),
   babel({
