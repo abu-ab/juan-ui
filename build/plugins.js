@@ -5,6 +5,7 @@ const vue = require('rollup-plugin-vue') // 处理vue文件
 const babel = require('rollup-plugin-babel') // rollup 的babel插件 es6 转es5
 const commonjs = require('rollup-plugin-commonjs') // 将commonjs模块转换为es2015供rollup处理
 const postcss = require('rollup-plugin-postcss')
+const less = require("rollup-plugin-less");
 // const cssnano = require('cssnano ') //压缩css
 
 const {
@@ -25,6 +26,7 @@ const basePlugins = [
     resolve({
         extensions
     }),
+    less(),
     json(),
     vue({
         css: false

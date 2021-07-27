@@ -1,18 +1,8 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Documentation </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <span>count is: {{ state.count }}</span>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
-  <j-button @click="add">点击</j-button>
+  <j-button  @click="add" type="default">春眠不知晓</j-button>
+  <j-button @click="add" class="ml-2" type="success">处处闻啼鸟</j-button>
+  <j-button @click="add" class="ml-2" type="warning">夜来风雨声</j-button>
+  <j-button @click="add" class="ml-2" type="danger">花落知多少</j-button>
 </template>
 
 <script>
@@ -36,7 +26,5 @@ export default {
 </script>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+
 </style>

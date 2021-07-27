@@ -5,7 +5,7 @@ const vue = require('rollup-plugin-vue') // 处理vue文件
 const babel = require('rollup-plugin-babel') // rollup 的 babel 插件，ES6转ES5
 const commonjs = require('rollup-plugin-commonjs') // 将CommonJS模块转换为 ES2015 供 Rollup 处理
 const postcss = require('rollup-plugin-postcss')
-
+const less = require("rollup-plugin-less");
 const {
   terser
 } = require('rollup-plugin-terser')
@@ -14,12 +14,16 @@ const isProd = process.env.NODE_ENV == 'production'
 const extensions = [
   ".js",
   '.ts',
-  '.tsx'
+  '.tsx',
+  ".less"
 ]
 // 通用的插件
 const basePlugins = [
   resolve({
     extensions
+  }),
+  less({
+
   }),
   json(),
   vue(),
@@ -29,7 +33,7 @@ const basePlugins = [
     runtimeHelpers: true, // 使plugin-transform-runtime生效
   }),
   commonjs(),
-  postcss(),
+  // postcss(),
 ]
 // 开发环境需要使用的插件
 const devPlugins = []
