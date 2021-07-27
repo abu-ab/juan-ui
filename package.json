@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "rimraf ./lib && rollup -c --watch --environment NODE_ENV:development",
     "serve": "cd example && npm run dev",
-    "serve-cli": "cd example-cli && npm run serve"
+    "serve-cli": "cd example-cli && npm run serve",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -22,11 +23,13 @@
     "@babel/plugin-transform-flow-strip-types": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.14.5",
     "@vue/compiler-sfc": "^3.1.5",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^7.0.2",
+    "jest": "^27.0.6",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.2",

@@ -7,12 +7,12 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="state.count++">count is: {{ state.count }}</button>
+  <span>count is: {{ state.count }}</span>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
-  <jButton />
+  <j-button @click="add">点击</j-button>
 </template>
 
 <script>
@@ -23,8 +23,13 @@ export default {
   },
   setup() {
     const state = reactive({ count: 0 });
+    function add() {
+      console.log(1231);
+      state.count++;
+    }
     return {
-      state
+      state,
+      add
     };
   }
 };
