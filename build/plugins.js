@@ -40,7 +40,6 @@ const basePlugins = [
     }),
     commonjs(),
     postcss({
-        // plugins: [cssnano]
         extract: 'theme/index.css' // css输出路径
     })
 ]

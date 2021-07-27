@@ -24,6 +24,9 @@ const basePlugins = [
   }),
   json(),
   vue(),
+  less({
+    output: false
+  }),
   babel({
     exclude: 'node_modules/**', // 防止打包node_modules下的文件
     extensions,

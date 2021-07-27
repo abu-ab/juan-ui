@@ -67,7 +67,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-@import '../../theme/base.less';
+@import '../../themes/base.less';
 .j-button {
   font-weight: 500;
   font-size: 14px;
