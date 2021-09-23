@@ -1,1 +1,2 @@
-console.log(1232)
+import "./default.less"
+import "./font.less"
