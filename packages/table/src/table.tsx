@@ -28,17 +28,21 @@ export default defineComponent({
           </colgroup>
           <thead class="table-header">
             <tr>
-              {props.headers.forEach(item => {
+              {props.headers.map(item => {
                 console.log(item);
                 return <th>{item.text}</th>;
               })}
             </tr>
           </thead>
           <tbody class="table-body">
-            {props.list.forEach(item => {
-              headerTitle.forEach(title => {
-                return <td>{item[title]}</td>;
-              });
+            {props.list.map(item => {
+              return (
+                <tr>
+                  {headerTitle.map(title => {
+                    return <td>{item[title]}</td>;
+                  })}
+                </tr>
+              );
             })}
           </tbody>
         </table>
